@@ -5,15 +5,21 @@ import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import { BrowserRouter } from 'react-router-dom';
+import { ProSidebarProvider } from 'react-pro-sidebar';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <BrowserRouter>
+      <ProSidebarProvider>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </ProSidebarProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -2,38 +2,38 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btnCollapse {
+  border-bottom: 1px solid white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.btnCollapse .ps-menu-button:hover {
+  background-color: #283a47 !important;
 }
 
-.App-header {
-  min-height: 100vh;
+.ps-sidebar-container {
+  background-color: #283a47 !important;
+  color: white !important
+}
+
+.topbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 6.5px;
+  z-index: 2;
+  background-color: #429a86;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.topbar .btnSignOut {
+  background-color: #54c0a8;
+  color: white;
+  font-weight: bolder;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.topbar .btnSignOut:hover {
+  background-color: #54c0a8;
+}
+
+.ps-menu-button:hover {
+  background-color: #429a86 !important;
 }
