@@ -1,0 +1,27 @@
+.childContainer{
+    margin-left: 1.5rem;
+}
+.titleRow {
+    border-bottom: 1px solid gainsboro !important;
+}
+.titleRow .titleCol{
+    border-bottom: 2px solid black !important;
+    padding: 1rem 0 0.5rem;
+    color:grey;
+    font-weight: bold;
+    text-align: center;
+}
+.generalCol {
+    padding: 1rem 0 0.5rem;
+}
+.boxContainer {
+    padding: 1rem;
+}
+.box {
+    border: 2px solid grey;
+    padding: 0.5rem;
+}
+.pieContainer {
+    display: flex;
+    justify-content: space-around;
+}

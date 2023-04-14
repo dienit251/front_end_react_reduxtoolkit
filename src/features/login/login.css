@@ -4,15 +4,19 @@
 }
 
 .paperContainer {
-    margin: 20rem auto;
+    margin: 18rem auto;
     padding: 2rem;
     width: 20%;
 }
-
-.loginForm {
-    margin-top: 2rem !important;
+.paperContainer form {
+    display: flex;
+    justify-content: center;
 }
 
 .textFieldMUI {
     margin-bottom: 1rem !important
+}
+.loginForm h3 {
+    color: var(--primary-color);
+    font-weight: bolder;
 }

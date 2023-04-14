@@ -7,6 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --primary-color: #2C99AF;
+  --secondary-color: #FFA500;
+  --blue-color: rgb(43, 120, 228);
+  --green-color: rgb(34, 139, 34);
+  --icon-color: #FFD700;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -25,8 +33,12 @@ aside {
 main {
   padding: 0px;
   width: 100%;
+  height: 100%
 }
 
 .app {
   display: flex;
+}
+.outletForChild {
+  width: 95%
 }

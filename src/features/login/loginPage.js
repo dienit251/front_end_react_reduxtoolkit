@@ -23,8 +23,8 @@ function LoginPage() {
             const expires = new Date(Date.now() + Number(expireTime) * 1000); // Convert seconds to milliseconds
             Cookies.set('accessToken', accessToken, { expires: expires, path: '/' });
             Cookies.set('authorities', authorities, { expires: expires, path: '/' });
-            Cookies.set('expireTime', expireTime, { expires: expires, path: '/' });
-            navigate('/home');
+            Cookies.set('username', username, { expires: expires, path: '/' });
+            navigate('/home/dashboard');
         } catch (error) {
             console.error(error);
         }
@@ -33,11 +33,11 @@ function LoginPage() {
     return (
 
         <Paper className="paperContainer">
-            <h1>LOGIN</h1>
+
             <form onSubmit={submitLogin}>
                 <FormControl className="loginForm">
-
-                    <TextField label="Username" variant="standard" type='text'
+                    <h3>COLLECTION SYSTEM</h3>
+                    <TextField label="Username" variant="outlined" type='text' fullWidth size="small" style={{ marginTop: '1.5rem' }}
                         InputProps={{
                             startAdornment: (
                                 <InputAdornment position="start">
@@ -47,7 +47,7 @@ function LoginPage() {
                         }}
                         className='textFieldMUI'
                         onChange={(event) => setUsername(event.target.value)} />
-                    <TextField label="Password" variant="standard" type='password'
+                    <TextField label="Password" variant="outlined" type='password' fullWidth size="small"
                         InputProps={{
                             startAdornment: (
                                 <InputAdornment position="start">
@@ -60,7 +60,7 @@ function LoginPage() {
                     <Button variant="contained" color="success" type='submit' style={{ marginTop: '1rem', backgroundColor: '#429a86' }}>
                         LOGIN
                     </Button>
-                    {loginError && <span style={{ color: 'red' }}>{loginError}</span>}
+                    {loginError && <span style={{ color: 'red', fontSize: '14px' }}>{loginError}</span>}
                 </FormControl>
             </form>
         </Paper>
